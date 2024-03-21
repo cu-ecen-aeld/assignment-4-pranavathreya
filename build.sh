@@ -11,6 +11,7 @@ git submodule update
 
 set -e 
 cd `dirname $0`
+echo "pwd: "$(pwd)
 
 if [ ! -e buildroot/.config ]
 then
