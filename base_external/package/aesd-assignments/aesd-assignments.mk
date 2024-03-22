@@ -6,15 +6,17 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = 'f5361b5bc33e00fa2e1dc61316a03529295a1bf7'
+AESD_ASSIGNMENTS_VERSION = '89570321d1a63149ee92ca50041c9e45a8ef5792'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
 AESD_ASSIGNMENTS_SITE = 'git@github.com:cu-ecen-aeld/assignments-3-and-later-pranavathreya.git'
 AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
+CC = $(which aarch64-none-linux-gnu-gcc)
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
+	echo "@D: "$(@D)
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app all
 endef
 
